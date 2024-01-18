@@ -1,19 +1,137 @@
-<div class="container mx-auto px-12 shadow-lg">
+<header class="px-12 shadow-lg fixed top-0 left-0 z-10 bg-slate-900">
   <nav class="columns-2">
     <div class="text-white py-5">
-      <p class="text-4xl text-blue-600 font-semibold">
-        J<span class="text-white font-light">villa</span>
-      </p>
+      <img
+        src="/Logo-blanco.png"
+        class="w-[70%] md:w-[25%] lg:w-[20%]"
+        alt=""
+        srcset=""
+      />
     </div>
-    <div class="text-white py-5 flex justify-end space-x-3">
-      <a href="#" class="py-2 px-4 rounded hover:bg-slate-800"> Inicio</a>
-      <a href="#" class="py-2 px-4 rounded hover:bg-slate-800">Sobre mi</a>
-      <a href="#" class="py-2 px-4 rounded hover:bg-slate-800">Contacto</a>
+    <div
+      class="text-white py-7 flex justify-end space-x-3 hidden md:inline-flex md:justify-end md:w-[100%]"
+    >
       <a
-        href="#"
-        class="py-2 px-5 bg-blue-600 text-white rounded hover:bg-blue-500 hover:text-white"
-        >Claro</a
+        href="#home"
+        class="py-2 px-4 rounded hover:bg-slate-800 transicionColor"
+      >
+        Inicio</a
+      >
+      <a
+        href="#labexp"
+        class="py-2 px-4 rounded hover:bg-slate-800 transicionColor hidden lg:inline-flex"
+        >Experiencia Laboral</a
+      >
+      <a
+        href="#labexp"
+        class="py-2 px-4 rounded hover:bg-slate-800 transicionColor lg:hidden"
+        >Experiencia</a
+      >
+      <a
+        href="#projects"
+        class="py-2 px-4 rounded hover:bg-slate-800 transicionColor"
+        >Proyectos</a
       >
     </div>
+    <div
+      class="text-white py-7 sm:py-12 md:py-7 flex justify-end items-center space-x-3 md:hidden"
+    >
+      <div class="flex justify-end items-center nav">
+        <button class="flex justify-center items-center btnMenu">
+          <svg
+            width="60"
+            height="60"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M4 6l16 0"></path><path d="M4 12l16 0"></path><path
+              d="M4 18l16 0"></path></svg
+          >
+        </button>
+
+        <button
+          class="text-white mt-10 flex justify-center items-center close absolute hidden"
+        >
+          <svg
+            width="60"
+            height="60"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg
+          >
+        </button>
+
+        <ul
+          class="bg-white w-[100%] absolute top-[140px] left-0 z-10 hidden"
+          id="menu"
+        >
+          <li
+            class="text-black font-bold hover:bg-blue-500 hover:text-white flex"
+          >
+            <a href="#home" class="w-[100%] h-[100%] text-center py-5">Inicio</a
+            >
+          </li>
+          <li
+            class="text-black font-bold hover:bg-blue-500 hover:text-white flex"
+          >
+            <a href="#labexp" class="w-[100%] h-[100%] text-center py-5"
+              >Experiencia Laboral</a
+            >
+          </li>
+          <li
+            class="text-black font-bold hover:bg-blue-500 hover:text-white flex"
+          >
+            <a href="#projects" class="w-[100%] h-[100%] text-center py-5"
+              >Proyectos</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <style>
+      .transicionColor:hover {
+        transition: all 0.5s ease;
+      }
+
+      #menu {
+        transition: all 0.5 ease;
+      }
+    </style>
+
+    <script>
+      const btnMenu = document.querySelector(".btnMenu");
+      const close = document.querySelector(".close");
+      const menu = document.querySelector("#menu");
+
+      const btnMenuFunction = () => {
+        close.classList.toggle("hidden");
+        btnMenu.classList.toggle("hidden");
+        menu.classList.toggle("hidden");
+      };
+
+      close.addEventListener("click", (e) => {
+        e.preventDefault();
+        btnMenuFunction();
+      });
+
+      btnMenu.addEventListener("click", (e) => {
+        e.preventDefault();
+        btnMenuFunction();
+      });
+
+      menu.addEventListener("click", (e) => {
+        btnMenuFunction();
+      });
+    </script>
   </nav>
-</div>
+</header>
