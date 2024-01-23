@@ -1,8 +1,12 @@
-import { defineConfig } from 'astro/config';
+// astro.config.mjs
+import tailwind from '@astrojs/tailwind';
 
-import tailwind from "@astrojs/tailwind";
-
-// https://astro.build/config
-export default defineConfig({
-  integrations: [tailwind()]
-});
+export default {
+  integrations: [
+    tailwind(),
+    // Otros plugins si los tienes
+  ],
+  buildOptions: {
+    baseUrl: '/portafolio/'
+  }
+};
