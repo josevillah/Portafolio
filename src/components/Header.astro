@@ -1,43 +1,44 @@
-<header class="px-12 shadow-lg fixed top-0 left-0 z-10 bg-slate-900">
-  <nav class="columns-2">
-    <div class="text-white py-5">
-      <img
-        src="/Logo-blanco.png"
-        class="w-[70%] md:w-[25%] lg:w-[20%]"
-        alt=""
-        srcset=""
-      />
+<header class="w-[100%] px-10 py-2 bg-slate-900 fixed top-0 left-0 z-10">
+  <section class="w-[100%] flex flex-row">
+    <div class="w-[50%]">
+      <div class="max-w-[150px] flex object-cover">
+        <img class="w-[100%] h-[100%]" src="/Logo-blanco.png" />
+      </div>
     </div>
-    <div
-      class="text-white py-7 flex justify-end space-x-3 hidden md:inline-flex md:justify-end md:w-[100%]"
-    >
-      <a
-        href="#home"
-        class="py-2 px-4 rounded hover:bg-slate-800 transicionColor"
+    <nav class="w-[50%]">
+      <!-- Menu escritorio -->
+      <ul
+        class="flex-row justify-end items-center gap-2 text-lg font-bold w-[100%] h-[100%] hidden md:flex"
       >
-        Inicio</a
-      >
-      <a
-        href="#labexp"
-        class="py-2 px-4 rounded hover:bg-slate-800 transicionColor hidden lg:inline-flex"
-        >Experiencia Laboral</a
-      >
-      <a
-        href="#labexp"
-        class="py-2 px-4 rounded hover:bg-slate-800 transicionColor lg:hidden"
-        >Experiencia</a
-      >
-      <a
-        href="#projects"
-        class="py-2 px-4 rounded hover:bg-slate-800 transicionColor"
-        >Proyectos</a
-      >
-    </div>
-    <div
-      class="text-white py-7 sm:py-12 md:py-7 flex justify-end items-center space-x-3 md:hidden"
-    >
-      <div class="flex justify-end items-center nav">
-        <button class="flex justify-center items-center btnMenu">
+        <li>
+          <a
+            class="text-white hover:bg-slate-800 rounded px-[12px] py-[10px] transicionColor"
+            href="#home">Inicio</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-white hover:bg-slate-800 rounded px-[12px] py-[10px] hidden lg:inline-block transicionColor"
+            href="#labexp">Experiencia laboral</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-white hover:bg-slate-800 rounded px-[12px] py-[10px] lg:hidden transicionColor"
+            href="#labexp">Experiencia</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-white hover:bg-slate-800 rounded px-[12px] py-[10px] transicionColor"
+            href="#projects">Proyecto</a
+          >
+        </li>
+      </ul>
+      <!-- Menu movile -->
+      <div class="w-[100%] h-[100%] flex justify-end">
+        <!-- Boton menu -->
+        <button class="text-white md:hidden btnMenu">
           <svg
             width="60"
             height="60"
@@ -48,14 +49,12 @@
             stroke-linecap="round"
             stroke-linejoin="round"
             ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-              d="M4 6l16 0"></path><path d="M4 12l16 0"></path><path
-              d="M4 18l16 0"></path></svg
+              d="M4 6h16"></path><path d="M7 12h13"></path><path d="M10 18h10"
+            ></path></svg
           >
         </button>
-
-        <button
-          class="text-white mt-10 flex justify-center items-center close absolute hidden"
-        >
+        <!-- Boton cerrar menu -->
+        <button class="text-white hidden md:hidden close">
           <svg
             width="60"
             height="60"
@@ -66,72 +65,74 @@
             stroke-linecap="round"
             stroke-linejoin="round"
             ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-              d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg
+              d="M12 21a9 9 0 0 0 9 -9a9 9 0 0 0 -9 -9a9 9 0 0 0 -9 9a9 9 0 0 0 9 9z"
+            ></path><path d="M9 8l6 8"></path><path d="M15 8l-6 8"></path></svg
           >
         </button>
 
+        <!-- Menu -->
         <ul
-          class="bg-white w-[100%] absolute top-[140px] left-0 z-10 hidden"
-          id="menu"
+          class="w-[100%] bg-white text-center absolute top-[90px] left-0 flex flex-col text-blue-700 text-xl font-bold menu hidden"
         >
-          <li
-            class="text-black font-bold hover:bg-blue-500 hover:text-white flex"
-          >
-            <a href="#home" class="w-[100%] h-[100%] text-center py-5">Inicio</a
+          <li class="flex">
+            <a
+              href="#home"
+              class="w-[100%] h-[100%] py-7 hover:bg-blue-500"
+              href="">Inicio</a
             >
           </li>
-          <li
-            class="text-black font-bold hover:bg-blue-500 hover:text-white flex"
-          >
-            <a href="#labexp" class="w-[100%] h-[100%] text-center py-5"
-              >Experiencia Laboral</a
+          <li class="flex">
+            <a
+              href="#labexp"
+              class="w-[100%] h-[100%] py-7 hover:bg-blue-500"
+              href="">Experiencia laboral</a
             >
           </li>
-          <li
-            class="text-black font-bold hover:bg-blue-500 hover:text-white flex"
-          >
-            <a href="#projects" class="w-[100%] h-[100%] text-center py-5"
-              >Proyectos</a
+          <li class="flex">
+            <a
+              href="#projects"
+              class="w-[100%] h-[100%] py-7 hover:bg-blue-500"
+              href="">Proyectos</a
             >
           </li>
         </ul>
       </div>
-    </div>
-
-    <style>
-      .transicionColor:hover {
-        transition: all 0.5s ease;
-      }
-
-      #menu {
-        transition: all 0.5 ease;
-      }
-    </style>
-
-    <script>
-      const btnMenu = document.querySelector(".btnMenu");
-      const close = document.querySelector(".close");
-      const menu = document.querySelector("#menu");
-
-      const btnMenuFunction = () => {
-        close.classList.toggle("hidden");
-        btnMenu.classList.toggle("hidden");
-        menu.classList.toggle("hidden");
-      };
-
-      close.addEventListener("click", (e) => {
-        e.preventDefault();
-        btnMenuFunction();
-      });
-
-      btnMenu.addEventListener("click", (e) => {
-        e.preventDefault();
-        btnMenuFunction();
-      });
-
-      menu.addEventListener("click", (e) => {
-        btnMenuFunction();
-      });
-    </script>
-  </nav>
+    </nav>
+  </section>
 </header>
+
+<style>
+  .transicionColor:hover {
+    transition: all 0.5s ease;
+  }
+</style>
+
+<script>
+  const btnMenu = document.querySelector(".btnMenu");
+  const close = document.querySelector(".close");
+  const menu = document.querySelector(".menu");
+
+  //   Funcion para abrir y cerrar el menu
+  const btnMenuFunction = () => {
+    close.classList.toggle("hidden");
+    btnMenu.classList.toggle("hidden");
+    menu.classList.toggle("hidden");
+  };
+
+  //   Evento para cerrar el menu al hacer click en el boton cerrar
+  close.addEventListener("click", (e) => {
+    e.preventDefault();
+    btnMenuFunction();
+  });
+
+  //   Evento para abrir el menu al hacer click en el boton menu
+  btnMenu.addEventListener("click", (e) => {
+    e.preventDefault();
+    btnMenuFunction();
+  });
+
+  //   Evento para cerrar el menu al hacer click en un enlace
+  menu.addEventListener("click", (e) => {
+    btnMenuFunction();
+  });
+</script>
